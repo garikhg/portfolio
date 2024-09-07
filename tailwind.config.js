@@ -28,6 +28,10 @@ module.exports = {
         extend: {
             colors: {
                 background: 'var(--ang--frost-gray)',
+                primary: {
+                    DEFAULT: 'var(--ang--primary)',
+                    foreground: 'var(--ang--primary-foreground)',
+                },
             }
         },
     },

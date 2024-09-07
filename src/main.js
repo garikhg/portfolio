@@ -1,1 +1,1 @@
-import './styles.scss'window.addEventListener("DOMContentLoaded", ()=> {    console.log('main js')});
+import './styles.scss'window.addEventListener("DOMContentLoaded", ()=> {    console.log('main js')    lucide.createIcons();});

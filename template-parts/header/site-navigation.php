@@ -16,7 +16,7 @@
 	<?php wp_nav_menu(
 		array(
 			'theme_location'  => 'primary',
-			'menu_class'      => 'menu-wrapper flex items-center list-none justify-between gap-x-4 ml-auto -mr-3',
+			'menu_class'      => 'menu-wrapper flex items-center list-none justify-between gap-x-2 ml-auto -mr-3',
 			'container_class' => 'primary-menu-container hidden lg:block',
 			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'fallback_cb'     => false,
