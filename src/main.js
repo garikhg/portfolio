@@ -1,0 +1,1 @@
+import './styles.scss'window.addEventListener("DOMContentLoaded", ()=> {    console.log('main js')});
