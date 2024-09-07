@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ang--cream: #FEF9EF;
+    --ang--frost-gray: #F7F7F8;
+    --ang--light-gray: #eeeeee;
+    --ang--black: #000;
+  }
+}
