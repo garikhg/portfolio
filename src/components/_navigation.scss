@@ -1,0 +1,17 @@
+.primary-navigation {
+  .menu-wrapper {
+    > li {
+      a {
+        @apply py-3 px-6 transition-all duration-200 transform ease-in-out rounded-full;
+
+        &:hover {
+          @apply bg-light-gray;
+        }
+      }
+
+      &.current-menu-item a {
+        @apply bg-light-gray;
+      }
+    }
+  }
+}
