@@ -3,9 +3,14 @@ module.exports = {
     content: [
         "./*.php",
         "./inc/**/*.php",
+        "./templates/**/*.php",
         "./template-parts/**/*.php",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+    daisyui: {
+        themes: ["bumblebee"],
+    },
+    darkMode: 'class',
     theme: {
         container: {
             center: true,
@@ -37,6 +42,7 @@ module.exports = {
     },
     plugins: [
         require('tailwindcss-animate'),
+        require('daisyui')
     ],
 }
 
