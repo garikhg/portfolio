@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.10",
     "path": "^0.12.7",
     "postcss": "^8.4.45",
     "tailwindcss": "^3.4.10",
@@ -21,7 +22,9 @@
   },
   "dependencies": {
     "cssnano": "^6.1.2",
+    "isotope-layout": "^3.0.6",
     "lucide-static": "^0.439.0",
+    "perspective.js": "^1.0.0",
     "sass": "^1.78.0",
     "tailwindcss-animate": "^1.0.7"
   }
