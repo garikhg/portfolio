@@ -20,7 +20,7 @@ module.exports = {
             }
         },
         fontFamily: {
-            heading: ['"League Spartan", sans-serif'],
+            heading: ['"DM Sans", sans-serif'],
             body: ['"Inter", sans-serif'],
         },
         backgroundColor: {
@@ -37,6 +37,9 @@ module.exports = {
                     DEFAULT: 'var(--ang--primary)',
                     foreground: 'var(--ang--primary-foreground)',
                 },
+            },
+            transitionProperty: {
+                cubicBezier: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
             }
         },
     },

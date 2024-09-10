@@ -1,23 +1,20 @@
 <?php
 /**
  * Template Name: Page Portfolio
+ *
+ * Portfolio items perspective https://perspective.js.org/
  */
 
 get_header();
 ?>
 <!--
- Page header class if has background image:
- page-header min-h-[340px] flex items-center justify-center bg-frost-gray rounded-2xl px-16
- Portfolio items perspective https://perspective.js.org/
+ Page header class if has background image: page-header min-h-[340px] flex items-center justify-center bg-frost-gray rounded-2xl px-16
 -->
-<div class="page-header flex items-center justify-center px-16">
-    <div class="page-title__wrapper py-16">
-		<?php the_title( '<h1 class="page-title text-6xl font-semibold text-center">', '</h1>' ) ?>
-        <p class="text-lg text-center font-light">Explore a curated showcase of my work</p>
-    </div>
-</div>
+<?php get_template_part( 'template-parts/header/page-header', '', [
+	'description' => esc_html( 'Explore a curated showcase of my work' )
+] ); ?>
 
-<div class="page-content py-20">
+<div class="page-content pt-20">
     <div class="portfolio-projects">
         <div class="portfolio-filter flex gap-2 pb-5" data-filter="portfolio" data-filter-paged="true">
             <p>Filter by:</p>
