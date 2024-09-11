@@ -13,7 +13,7 @@ $me_photo = get_template_directory_uri() . '/assets/images/demo/angeladiloyan-1x
         <div class="flex flex-wrap -mx-4">
 
             <div class="w-2/6 flex justify-start px-4">
-                <div class="text-center flex flex-col bg-background rounded-2xl p-6">
+                <div class="text-center flex flex-col gap-4 bg-background rounded-2xl p-4 lg:p-8">
                     <div>
                         <div class="overflow-hidden rounded-full w-80 h-80 border border-background">
                             <img src="<?php echo esc_url( $me_photo ) ?>"
@@ -22,32 +22,51 @@ $me_photo = get_template_directory_uri() . '/assets/images/demo/angeladiloyan-1x
                             >
                         </div>
                         <div class="mt-8">
-                            <h2 class="font-bold font-heading text-3xl">Angela Diloyan</h2>
+                            <h2 class="text-primary font-bold font-heading text-3xl">Angela Diloyan</h2>
                             <span class="block text-base text-gray-500 mt-1">eLearning Specialist</span>
                         </div>
-                    </div>
+                        <span class="w-10 block border-b border-gray-200 mx-auto my-8"></span>
 
-                    <div class="mt-auto p-6">
-                        <h5 class="text-base text-start font-semibold font-heading">Contact Me:</h5>
-                        <div class="pt-4 space-y-2">
-                            <a class="text-link flex gap-2 items-center group" href="#">
-                                <span class="w-8 h-8 flex items-center justify-center bg-light-gray rounded-full
-                                text-primary group-hover:bg-primary group-hover:text-white transition-all p-2">
-                                    <i data-lucide="phone" class="icon-phone w-5 h-5"></i>
-                                </span>
-                                <span class="text">(555) 123-4567</span>
-                            </a>
+                        <ul class="list-none flex items-center justify-center gap-6">
+                            <li>
+                                <a href="#" class="items-center">
+                                    <i class="fa-brands fa-facebook w-6 h-6"></i>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="items-center">
+                                    <i class="fa-brands fa-instagram instagram-icon w-6 h-6"></i>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="items-center">
+                                    <i class="fa-brands fa-linkedin w-6 h-6"></i>
+                                    <span class="sr-only">Linkedin In</span>
+                                </a>
+                            </li>
+                        </ul>
 
-                            <a class="text-link flex gap-2 items-center group" href="#">
-                                <span class="w-8 h-8 flex items-center justify-center bg-light-gray rounded-full
-                                text-primary group-hover:bg-primary group-hover:text-white transition-all p-2">
-                                    <i data-lucide="mail" class="icon-mail w-5 h-5"></i>
-                                </span>
-                                <span class="text">info@angeladiloyan.com</span>
-                            </a>
+                        <span class="w-10 block border-b border-gray-200 mx-auto my-8"></span>
 
+                        <div class="text-center">
+                            <h5 class="text-base font-semibold font-heading">Contact Me:</h5>
+                            <ul class="pt-2 text-center">
+                                <li>
+                                    <a class="text-link w-fit group py-0.5 inline-block" href="#">
+                                        <span class="text">(555) 123-4567</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-link group py-0.5 inline-block" href="#">
+                                        <span class="text">info@angeladiloyan.com</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
 
