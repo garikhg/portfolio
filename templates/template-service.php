@@ -39,7 +39,7 @@ get_header();
             </div>
             <div class="service-table mb-8">
 
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
@@ -61,7 +61,7 @@ get_header();
 
             </div>
             <div class="service-table mb-8">
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
@@ -83,7 +83,7 @@ get_header();
 
             </div>
             <div class="service-table mb-8">
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
@@ -127,7 +127,7 @@ get_header();
 
             </div>
             <div class="service-table mb-8">
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
@@ -149,7 +149,7 @@ get_header();
 
             </div>
             <div class="service-table mb-8">
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
@@ -171,7 +171,7 @@ get_header();
 
             </div>
             <div class="service-table mb-8">
-                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background p-4">
+                <div class="service-table-inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
                     <div class="mb-5">
                         <i data-lucide="pen-tool" class="w-8 h-8"></i>
                     </div>
