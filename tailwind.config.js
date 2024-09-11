@@ -29,6 +29,7 @@ module.exports = {
             'light-gray': 'var(--ang--light-gray)',
             background: 'var(--ang--frost-gray)',
             black: 'var(--ang--black)',
+            primary: 'var(--ang--primary)',
         },
         extend: {
             colors: {
