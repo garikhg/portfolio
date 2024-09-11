@@ -23,7 +23,7 @@ a.text-link {
   &:hover {
     color: var(--ang--primary);
 
-    span:after {
+    span.text:after {
       width: 100%;
       transform: scaleY(1);
       transition: var(--ang--transition-base);
