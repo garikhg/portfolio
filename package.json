@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "cssnano": "^6.1.2",
+    "gsap": "^3.12.5",
     "isotope-layout": "^3.0.6",
     "lucide-static": "^0.439.0",
     "perspective.js": "^1.0.0",
