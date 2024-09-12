@@ -1,0 +1,35 @@
+.button-animate {
+  .button-text {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      line-height: 1.6;
+      width: auto;
+      text-align: center;
+      position: relative;
+      transition: transform 200ms ease-in-out;
+      transform-origin: 100% 0;
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content: attr(data-hover);
+      }
+    }
+  }
+
+  &:hover .button-text span {
+    transform: translateY(-100%);
+    transform-origin: 0 0;
+  }
+}
+
+.button-primary-link {
+  color: var(--ang--primary);
+}
+

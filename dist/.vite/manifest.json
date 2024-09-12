@@ -1,0 +1,38 @@
+{
+  "node_modules/lucide-static/font/lucide.eot": {
+    "file": "lucide.eot",
+    "src": "node_modules/lucide-static/font/lucide.eot"
+  },
+  "node_modules/lucide-static/font/lucide.svg": {
+    "file": "lucide.svg",
+    "src": "node_modules/lucide-static/font/lucide.svg"
+  },
+  "node_modules/lucide-static/font/lucide.ttf": {
+    "file": "lucide.ttf",
+    "src": "node_modules/lucide-static/font/lucide.ttf"
+  },
+  "node_modules/lucide-static/font/lucide.woff": {
+    "file": "lucide.woff",
+    "src": "node_modules/lucide-static/font/lucide.woff"
+  },
+  "node_modules/lucide-static/font/lucide.woff2": {
+    "file": "lucide.woff2",
+    "src": "node_modules/lucide-static/font/lucide.woff2"
+  },
+  "src/main.js": {
+    "file": "main.js",
+    "name": "main",
+    "src": "src/main.js",
+    "isEntry": true,
+    "css": [
+      "main.css"
+    ],
+    "assets": [
+      "lucide.eot",
+      "lucide.woff2",
+      "lucide.woff",
+      "lucide.ttf",
+      "lucide.svg"
+    ]
+  }
+}

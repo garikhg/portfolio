@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ang--primary: #253570;
+    --ang--primary-foreground: #fff;
+    --ang--cream: #FEF9EF;
+    --ang--frost-gray: #F7F7F8;
+    --ang--light-gray: #eeeeee;
+    --ang--black: #000;
+    --ang--white: #fff;
+
+    --ang--transition-base: all 200ms ease-in-out 0ms;
+    --ang--transition-cubic-bezier: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+}

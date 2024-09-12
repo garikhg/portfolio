@@ -1,0 +1,44 @@
+a.text-link {
+  transition: var(--ang--transition-base);
+
+  span {
+    position: relative;
+    transition: var(--ang--transition-base);
+
+    &:after {
+      display: inline-block;
+      content: '';
+      height: 1px;
+      width: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: left;
+      background-color: var(--ang--primary);
+      transition: var(--ang--transition-base);
+    }
+  }
+
+  &:hover {
+    color: var(--ang--primary);
+
+    span.text:after {
+      width: 100%;
+      transform: scaleY(1);
+      transition: var(--ang--transition-base);
+    }
+  }
+}
+
+a.text-link-foreground {
+  color: var(--ang--primary-foreground);
+
+  span:after {
+    background-color: var(--ang--primary-foreground);
+  }
+
+  &:hover {
+    color: var(--ang--primary-foreground);
+  }
+}
