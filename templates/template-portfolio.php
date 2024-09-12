@@ -59,7 +59,7 @@ get_header();
         </div>
 
         <div class="portfolio-grid grid grid-cols-3 -mx-5">
-            <div class="portfolio-item-wrap grid-item col-span-1">
+            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -106,7 +106,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-2">
+            <div class="portfolio-item-wrap grid-item col-span-2" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -152,7 +152,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1">
+            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -198,7 +198,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1">
+            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -244,7 +244,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1">
+            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -290,7 +290,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-2">
+            <div class="portfolio-item-wrap grid-item col-span-2" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -336,7 +336,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1">
+            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
