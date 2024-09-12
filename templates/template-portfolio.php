@@ -20,46 +20,69 @@ get_header();
             <p>Filter by:</p>
             <ul class="portfolio-filter__list flex gap-2">
                 <li class="flex items-center gap-1 is-active">
-                    <a href="#all" data-category-count="15" class="text-link">
-                        <span class="text">All</span>
-                        <sup>15</sup>
+                    <a href="#all"
+                       data-category-count="15"
+                       data-filter="*"
+                       class="portfolio-filter-button text-link"
+                    >
+                        <span class="pointer-events-none text">All</span>
+                        <sup class="pointer-events-none">15</sup>
                     </a>
                 </li>
                 <li class="flex items-center gap-1">
-                    <a href="#apps" data-category-count="3" class="text-link">
-                        <span class="text">Apps</span>
-                        <sup>3</sup>
+                    <a href="#apps"
+                       data-category-count="3"
+                       data-filter=".apps"
+                       class="portfolio-filter-button text-link"
+                    >
+                        <span class="pointer-events-none text">Apps</span>
+                        <sup class="pointer-events-none">3</sup>
                     </a>
                 </li>
                 <li class="flex items-center gap-1">
-                    <a href="#branding" class="text-link">
-                        <span class="text">Branding</span>
-                        <sup>4</sup>
+                    <a href="#branding"
+                       data-category-count="4"
+                       data-filter=".branding"
+                       class="portfolio-filter-button text-link">
+                        <span class="pointer-events-none text">Branding</span>
+                        <sup class="pointer-events-none">4</sup>
                     </a>
                 </li>
                 <li class="flex items-center gap-1">
-                    <a href="#creative" class="text-link">
-                        <span class="text">Creative</span>
-                        <sup>1</sup>
+                    <a href="#creative"
+                       data-category-count="1"
+                       data-filter=".creative"
+                       class="portfolio-filter-button text-link"
+                    >
+                        <span class="pointer-events-none text">Creative</span>
+                        <sup class="pointer-events-none">1</sup>
                     </a>
                 </li>
                 <li class="flex items-center gap-1">
-                    <a href="#identity" class="text-link">
-                        <span class="text">Identity</span>
-                        <sup>5</sup>
+                    <a href="#identity"
+                       data-category-count="5"
+                       data-filter=".identity"
+                       class="portfolio-filter-button text-link"
+                    >
+                        <span class="pointer-events-none text">Identity</span>
+                        <sup class="pointer-events-none">5</sup>
                     </a>
                 </li>
                 <li class="flex items-center gap-1">
-                    <a href="#mockup" class="text-link">
-                        <span class="text">Mockup</span>
-                        <sup>2</sup>
+                    <a href="#mockup"
+                       data-category-count="2"
+                       data-filter=".mockup"
+                       class="portfolio-filter-button text-link"
+                    >
+                        <span class="pointer-events-none text">Mockup</span>
+                        <sup class="pointer-events-none">2</sup>
                     </a>
                 </li>
             </ul>
         </div>
 
         <div class="portfolio-grid grid grid-cols-3 -mx-5">
-            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 apps" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -106,7 +129,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-2" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-8/12 grid-item col-span-2 apps" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -152,7 +175,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 apps" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -198,7 +221,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 mockup" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -244,12 +267,13 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 identity" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
                             <a href="#">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-1.jpeg' ?>" alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-1.jpeg' ?>"
+                                     alt="">
                             </a>
                         </div>
                         <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
@@ -290,7 +314,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-2" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-8/12 grid-item col-span-2 creative" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
@@ -336,7 +360,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item-wrap grid-item col-span-1" data-tilt-perspective="60000">
+            <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 branding" data-tilt-perspective="60000">
                 <div class="portfolio-item card p-5">
                     <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
                         <div class="image-holder">
