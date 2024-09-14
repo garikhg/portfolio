@@ -17,4 +17,12 @@
     --ang--transition-base: all 200ms ease-in-out 0ms;
     --ang--transition-cubic-bezier: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   }
+
+  html, body {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-base;
+  }
 }
