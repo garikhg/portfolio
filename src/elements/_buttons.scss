@@ -1,3 +1,12 @@
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  vertical-align: middle;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  min-height: 3rem; /* 48/16 */
+}
+
 .button-animate {
   .button-text {
     position: relative;

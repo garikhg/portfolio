@@ -25,7 +25,7 @@ $me_photo = get_template_directory_uri() . '/assets/images/demo/angeladiloyan-1x
                             <h2 class="text-primary font-bold font-heading text-3xl">Angela Diloyan</h2>
                             <span class="block text-base text-gray-500 mt-1">eLearning Specialist</span>
                         </div>
-                        <span class="w-10 block border-b border-gray-200 mx-auto my-8"></span>
+                        <span class="w-16 block border-b border-gray-200 mx-auto my-8"></span>
 
                         <ul class="list-none flex items-center justify-center gap-6">
                             <li>
@@ -70,7 +70,7 @@ $me_photo = get_template_directory_uri() . '/assets/images/demo/angeladiloyan-1x
                 </div>
             </div>
 
-            <div class="w-4/6 text-lg font-light leading-loose break-all space-y-8 px-4">
+            <div class="w-4/6 text-lg font-light leading-loose space-y-8 px-4">
                 <p>
                     Based in Alexandria, Virginia, I bring a diverse background and global perspective to my work in
                     eLearning, instructional design, and marketing. Originally from Queens, New York, my educational

@@ -15,7 +15,7 @@ if ( $hse_thumbnail ) {
 
 <div class="<?php echo esc_attr( $wrapper_classes ) ?>">
 	<?php if ( $hse_thumbnail ): ?>
-    <span class="block w-full h-full absolute bg-gradient-to-t from-black/60 to-transparent"></span>
+        <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
 		<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
 	<?php endif; ?>
 
