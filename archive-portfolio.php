@@ -1,20 +1,30 @@
 <?php
 /**
- * Template Name: Page Portfolio
+ * The template for displaying portfolio archive pages
  *
- * Portfolio items perspective https://perspective.js.org/
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 get_header();
 ?>
-<!--
- Page header class if has background image: page-header min-h-[340px] flex items-center justify-center bg-frost-gray rounded-2xl px-16
--->
-<?php get_template_part( 'template-parts/header/page-header', '', [
-	'description' => esc_html( 'Explore a curated showcase of my work' )
-] ); ?>
+<header class="archive-header relative text-white flex items-center justify-center has-header-background h-[480px] bg-frost-gray overflow-hidden rounded-2xl px-0">
 
-<div class="page-content pt-20">
+    <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
+    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/demo/projects/project-2.jpeg' ) ?>"
+         alt=""
+    >
+
+    <div class="archive-header-inside py-16">
+        <div class="archive-title__wrapper">
+			<?php the_title( '<h1 class="page-title text-5xl font-semibold text-center">', '</h1>' ) ?>
+        </div>
+        <p class="archive-description text-lg text-center font-light">
+            Explore a curated showcase of my work
+        </p>
+    </div>
+</header>
+
+<div class="archive-content pt-20">
     <div class="portfolio-projects">
         <div class="portfolio-filter flex gap-2 pb-5" data-filter="portfolio" data-filter-paged="true">
             <p>Filter by:</p>
@@ -91,9 +101,7 @@ get_header();
                             </a>
                         </div>
                         <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                            <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                    type="button"
-                            >
+                            <button class="w-14 h-14 flex items-center justify-center text-primary-foreground" type="button">
                                 <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
                                 <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
                             </button>
@@ -119,7 +127,7 @@ get_header();
                                         </ul>
                                     </div>
                                     <div class="show-project__link text-white font-semibold">
-                                        <a href="#" class="text-link text-link-foreground">
+                                        <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
                                             <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
                                         </a>
                                     </div>
@@ -138,8 +146,7 @@ get_header();
                             </a>
                         </div>
                         <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                            <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                    type="button">
+                            <button class="w-14 h-14 flex items-center justify-center text-primary-foreground" type="button">
                                 <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
                                 <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
                             </button>

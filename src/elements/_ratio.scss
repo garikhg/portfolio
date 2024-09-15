@@ -1,0 +1,18 @@
+/**
+  * 6:9 image sizes (width × height in pixels):
+  * 1280 × 720 (HD)
+  * 1920 × 1080 (Full HD)
+  * 2560 × 1440 (2K)
+  * 3840 × 2160 (4K)
+  * 7680 × 4320 (8K)
+  *
+  * Aspect ratio - 16:9
+ */
+[class="ratio-16/9"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}

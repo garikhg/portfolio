@@ -7,27 +7,35 @@ $hse_thumbnail   = has_post_thumbnail();
 $wrapper_classes = '';
 
 if ( $hse_thumbnail ) {
-	$wrapper_classes = 'page-header relative text-white flex items-center justify-center has-header-background h-full max-h-96 bg-frost-gray overflow-hidden rounded-2xl px-0';
+	$wrapper_classes = 'archive-header page-header relative text-white flex items-center justify-center has-header-background h-[480px] bg-frost-gray overflow-hidden rounded-2xl px-0';
 } else {
-	$wrapper_classes = 'page-header relative flex items-center justify-center h-full max-h-96 px-16';
+	$wrapper_classes = 'page-header relative flex items-center justify-center h-auto';
 }
+
+$title    = carbon_get_post_meta( get_the_ID(), 'crb_banner_title' ) ?? '';
+$subtitle = carbon_get_post_meta( get_the_ID(), 'crb_banner_subtitle' ) ?? '';
 ?>
 
-<div class="<?php echo esc_attr( $wrapper_classes ) ?>">
+<header class="<?php echo esc_attr( $wrapper_classes ) ?>">
 	<?php if ( $hse_thumbnail ): ?>
         <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
 		<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
 	<?php endif; ?>
 
-    <div class="page-header-inside py-16">
+    <div class="page-header-inside">
         <div class="page-title__wrapper">
-			<?php the_title( '<h1 class="page-title text-6xl font-semibold text-center">', '</h1>' ) ?>
+			<?php if ( ! empty( $title ) ): ?>
+                <h1 class="page-title text-5xl font-semibold text-center">
+					<?php echo $title; ?>
+                </h1>
+			<?php else: ?>
+				<?php the_title( '<h1 class="page-title text-5xl font-semibold text-center">', '</h1>' ) ?>
+			<?php endif; ?>
         </div>
-		<?php if ( ! empty( $args['description'] ) ): ?>
+		<?php if ( ! empty( $subtitle ) ): ?>
             <p class="page-description text-lg text-center font-light">
-				<?php echo $args['description']; ?>
+				<?php echo $subtitle; ?>
             </p>
 		<?php endif; ?>
     </div>
-
-</div>
+</header>

@@ -28,7 +28,7 @@ get_header();
 </div>
 
 <div class="page-content mt-20">
-    <section class="portfolio-projects bg-background full-max-width rounded-xl p-20 mt-24">
+    <section class="portfolio-projects bg-background alignfull rounded-xl p-20 mt-24">
         <div class="">
             <div class="max-w-xl mb-20">
                 <div class="section-heading">
