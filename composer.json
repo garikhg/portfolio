@@ -1,0 +1,17 @@
+{
+    "name": "angeladiloyan/portfolio",
+    "autoload": {
+        "psr-4": {
+            "Angeladiloyan\\Portfolio\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "garikhg",
+            "email": "garik.28h@gmail.com"
+        }
+    ],
+    "require": {
+        "htmlburger/carbon-fields": "^3.6"
+    }
+}
