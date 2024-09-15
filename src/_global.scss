@@ -59,6 +59,26 @@
   }
 
   p {
-    @apply mt-4 text-xl font-extralight;
+    @apply mt-4;
+  }
+
+  p,
+  ul li,
+  ol li {
+    @apply text-xl font-extralight;
+  }
+
+  .wp-block-list {
+    padding-left: 20px;
+
+    li {
+      padding: 2px 0 2px 12px;
+
+      &::marker {
+        content: '—';
+        display: inline-block;
+        margin-left: 8px;
+      }
+    }
   }
 }
