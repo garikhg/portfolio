@@ -1,6 +1,8 @@
-.page-header {
+.page-header,
+.archive-header {
   &.has-header-background {
-    .page-header-inside {
+    .page-header-inside,
+    .archive-header-inside {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
