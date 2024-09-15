@@ -8,7 +8,22 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     daisyui: {
-        themes: ["bumblebee"],
+        themes: [
+            {
+                mytheme: {
+                    primary: "#263570",
+                    secondary: "#415a94",
+                    accent: "#ff7f50",
+                    neutral: "#111013",
+                    "base-100": "#f3f4f6",
+                    info: "#3b82f6",
+                    success: "#4c6fb5",
+                    warning: "#f59e0b",
+                    error: "#ff0000",
+                },
+            },
+            "cupcake",
+        ],
     },
     darkMode: 'class',
     theme: {
@@ -38,6 +53,10 @@ module.exports = {
                     DEFAULT: 'var(--ang--primary)',
                     foreground: 'var(--ang--primary-foreground)',
                 },
+                secondary: {
+                    DEFAULT: 'var(--ang--secondary)',
+                    foreground: 'var(--ang--secondary-foreground)',
+                }
             },
             transitionProperty: {
                 cubicBezier: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
