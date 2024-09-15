@@ -1,10 +1,10 @@
-.full-max-width {
+.alignfull {
   margin-right: -50vw;
   margin-left: -50vw;
   padding-right: 50vw;
   padding-left: 50vw;
 }
 
-.site-content:has(.full-max-width) {
+.site-content:has(.alignfull) {
   overflow: hidden;
 }
