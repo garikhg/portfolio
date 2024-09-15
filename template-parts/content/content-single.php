@@ -39,14 +39,13 @@
                             </div>
                         </li>
                     </ul>
+                </div>
 
-                    <div class="divider before:h-px before:bg-primary after:h-px after:bg-primary"></div>
-                    <div class="">
-                        <a href="#" class="btn btn-ghost">
-                            <span class="btn-text text-xs uppercase"><?php esc_html_e( 'Open Project', 'portfolio' ); ?></span>
-                            <span class="btn-icon"><i class="icon-arrow-right"></i></span>
-                        </a>
-                    </div>
+                <div class="open-project-holder mt-6">
+                    <a href="#" class="btn w-full">
+                        <span class="btn-text uppercase"><?php esc_html_e( 'Open Project', 'portfolio' ); ?></span>
+                        <span class="btn-icon"><i class="icon-arrow-right"></i></span>
+                    </a>
                 </div>
             </div>
 
