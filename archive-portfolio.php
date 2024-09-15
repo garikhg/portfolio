@@ -77,340 +77,75 @@ get_header();
         </ul>
     </div>
 
-    <div class="portfolio-grid grid grid-cols-3 -mx-5">
-        <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 apps" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-1.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
+    <div class="portfolio-grid flex flex-wrap -mx-5">
+
+		<?php while ( have_posts() ): ?>
+			<?php
+			the_post();
+			$wrapper_class = 'portfolio-item-wrap w-1/2 grid-item apps'
+			?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
+                <div class="portfolio-item card p-5">
+                    <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
+                        <div class="image-holder">
+                            <a href="<?php echo get_permalink() ?>">
+								<?php
+								$thumbnail_classes = 'attachment-post_thumbnail size-post_thumbnail wp-post-image block w-full h-full max-w-full object-cover';
+								the_post_thumbnail( 'post_thumbnail', array( 'class' => $thumbnail_classes ) )
+								?>
+                            </a>
+                        </div>
+
+                        <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
+                            <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
+                                    type="button">
+                                <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
+                                <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
+                            </button>
+                        </div>
+
+                        <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
+                            <div class="heading">
+                                <h4 class="text-2xl font-semibold text-white"><?php the_title() ?></h4>
+                                <div class="show-project mt-2">
+                                    <div class="project-category__holder">
+                                        <ul class="project-category__list flex gap-1.5">
+                                            <li>
+                                                <a href="#"
+                                                   class="text-link text-link-foreground text-sm project-category__link inline-block">
+                                                    <span class="category-text">Identity</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                   class="text-link text-link-foreground text-sm project-category__link inline-block">
+                                                    <span class="category-text">Mockup</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="show-project__link text-white font-semibold">
+                                        <a href="<?php echo get_permalink() ?>" class="text-link text-link-foreground">
+                                            <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-8/12 grid-item col-span-2 apps" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 apps" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-3.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 mockup" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-4.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 identity" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-1.jpeg' ?>"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-8/12 grid-item col-span-2 creative" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-5.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item-wrap w-4/12 grid-item col-span-1 branding" data-tilt-perspective="60000">
-            <div class="portfolio-item card p-5">
-                <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
-                    <div class="image-holder">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-6.jpeg' ?>">
-                        </a>
-                    </div>
-                    <div class="overlay-details top fade-down absolute top-0 p-[3vh]">
-                        <button class="w-14 h-14 flex items-center justify-center text-primary-foreground"
-                                type="button">
-                            <span><i data-lucide="maximize" class="icon icon-maximize"></i></span>
-                            <span class="button-text sr-only"><?php esc_html_e( 'Show', 'portfolio' ); ?></span>
-                        </button>
-                    </div>
-                    <div class="overlay-details w-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 p-[3vh]">
-                        <div class="heading">
-                            <h4 class="text-2xl font-semibold text-white">Stickers Pack</h4>
-                            <div class="show-project mt-2">
-                                <div class="project-category__holder">
-                                    <ul class="project-category__list flex gap-1.5">
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Identity</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                               class="text-link text-link-foreground text-sm project-category__link inline-block">
-                                                <span class="category-text">Mockup</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="show-project__link text-white font-semibold">
-                                    <a href="/portfolio/stickers-pack/" class="text-link text-link-foreground">
-                                        <span class="text"><?php esc_html_e( 'Show project', 'portfolio' ); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </article>
+		<?php endwhile; ?>
     </div>
 
-    <div class="pagination-holder mt-4">
+    <!--<div class="pagination-holder mt-4">
         <div class="join">
             <button class="join-item btn">1</button>
             <button class="join-item btn btn-active">2</button>
             <button class="join-item btn">3</button>
             <button class="join-item btn">4</button>
         </div>
-    </div>
+    </div>-->
 </div>
 
 <?php get_footer(); ?>
