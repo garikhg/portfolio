@@ -18,7 +18,10 @@ if ( $archive_thumbnail ) {
 	<?php if ( $archive_thumbnail ): ?>
         <div class="absolute z-0 w-full h-full">
             <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
-			<?php echo wp_get_attachment_image( $archive_thumbnail, 'full', false, array( 'class' => 'attachment-full size-full w-full max-w-full' ) ) ?>
+			<?php
+			$attachment_classes = 'attachment-full size-full w-full max-w-full h-full object-cover';
+			echo wp_get_attachment_image( $archive_thumbnail, 'full', false, array( 'class' => $attachment_classes ) )
+			?>
         </div>
 	<?php endif; ?>
 
