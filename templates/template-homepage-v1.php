@@ -6,30 +6,34 @@
 get_header();
 ?>
 
-<div class="hero-slider-wrapper h-[480px] bg-frost-gray rounded-2xl">
-    <div class="swiper hero-slider rounded-2xl overflow-hidden">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2.jpeg' ?>"
-                     class="block w-full max-w-full h-[480px] object-cover"
-                     alt=""
-                />
-            </div>
+<div class="container">
 
-            <div class="swiper-slide">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2-1.jpeg' ?>"
-                     class="block w-full max-w-full h-[480px] object-cover"
-                     alt=""
-                />
+    <div class="hero-slider-wrapper h-[480px] bg-frost-gray rounded-2xl">
+        <div class="swiper hero-slider rounded-2xl overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2.jpeg' ?>"
+                         class="block w-full max-w-full h-[480px] object-cover"
+                         alt=""
+                    />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2-1.jpeg' ?>"
+                         class="block w-full max-w-full h-[480px] object-cover"
+                         alt=""
+                    />
+                </div>
             </div>
         </div>
+
     </div>
 
-</div>
+</div><!-- .container -->
 
 <div class="page-content mt-20">
-    <section class="portfolio-projects bg-background alignfull rounded-xl p-20 mt-24">
-        <div class="">
+    <section class="portfolio-projects bg-background rounded-xl p-20 mt-24">
+        <div class="container">
             <div class="max-w-xl mb-20">
                 <div class="section-heading">
                     <span class="badge badge-outline mb-2">39 completed projects</span>
@@ -38,7 +42,8 @@ get_header();
                     </h2>
                     <div class="section-description text-lg mt-3">
                         <p>
-                            Select from any of our carefuly <strong>crafted website templates</strong> to best fit your
+                            Select from any of our carefuly <strong>crafted website templates</strong> to best fit
+                            your
                             personal style and professional needs.
                         </p>
                     </div>
@@ -217,6 +222,7 @@ get_header();
             </div>
         </div>
     </section>
+
 
 </div>
 
