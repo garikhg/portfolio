@@ -15,7 +15,7 @@ a.text-link {
       left: 0;
       transform: scaleY(0);
       transform-origin: left;
-      background-color: var(--ang--primary);
+      background-color: currentColor;
       transition: var(--ang--transition-base);
     }
   }

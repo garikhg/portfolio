@@ -64,7 +64,7 @@
         &:after {
           content: ',';
           display: inline-block;
-          color: var(--ang--white);
+          color: currentColor;
         }
 
         &:last-child:after {
@@ -91,7 +91,7 @@
         display: inline-block;
         width: 50px;
         height: 2px;
-        background: var(--ang--white);
+        background-color: currentColor;
       }
     }
   }
