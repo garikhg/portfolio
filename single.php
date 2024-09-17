@@ -7,16 +7,15 @@
 
 get_header();
 
-$project_details_client      = carbon_get_post_meta( get_the_ID(), 'crb_project_client' ) ?? '';
-$project_details_date        = carbon_get_post_meta( get_the_ID(), 'crb_project_date' ) ?? '';
-$project_details_description = carbon_get_post_meta( get_the_ID(), 'crb_project_description' ) ?? '';
+$project_details_client      = get_field( 'project_client', get_the_ID() ) ?? '';
+$project_details_date        = get_field( 'project_date', get_the_ID() ) ?? '';
+$project_details_description = get_field( 'project_description', get_the_ID() ) ?? '';
 ?>
 <?php if ( have_posts() ): ?>
     <div class="w-auto fixed left-0">
         <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>"
            class="btn btn-back btn-link relative group h-14 px-2.5 inline-flex items-center no-underline hover:no-underline">
-            <span class="btn-icon w-14 h-14 flex items-center justify-center rounded-full transition-all duration-200 group-hover:bg-background"><i
-                        class="icon-arrow-left text-2xl"></i></span>
+            <span class="btn-icon w-14 h-14 flex items-center justify-center rounded-full transition-all duration-200 group-hover:bg-background"><i class="icon-arrow-left text-2xl"></i></span>
             <span class="btn-text text-base transition-all duration-200 opacity-0 translate-x-4 group-hover:translate-x-0 group-hover:opacity-100"><?php esc_html_e( 'Back', 'portfolio' ); ?></span>
         </a>
     </div>
@@ -31,7 +30,6 @@ $project_details_description = carbon_get_post_meta( get_the_ID(), 'crb_project_
             <div class="lg:w-1/4 px-8">
                 <div class="project-details sticky top-24">
                     <div class="project-details__holder bg-background rounded-2xl p-8">
-
 
                         <div class="project-details__header">
                             <h5 class="title mb-2 font-heading font-bold"><?php esc_html_e( 'Project Details', 'portfolio' ); ?></h5>
