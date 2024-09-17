@@ -13,7 +13,6 @@ if ( $archive_thumbnail ) {
 	$header_classes .= ' text-white h-[480px] overflow-hidden rounded-2xl';
 }
 ?>
-
 <header class="<?php echo esc_attr( $header_classes ); ?>">
 	<?php if ( $archive_thumbnail ): ?>
         <div class="absolute z-0 w-full h-full">
