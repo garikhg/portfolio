@@ -10,6 +10,7 @@ get_header();
 $project_details_client      = get_field( 'project_client', get_the_ID() ) ?? '';
 $project_details_date        = get_field( 'project_date', get_the_ID() ) ?? '';
 $project_details_description = get_field( 'project_description', get_the_ID() ) ?? '';
+$project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
 ?>
 <?php if ( have_posts() ): ?>
     <div class="w-auto fixed left-0">
@@ -63,13 +64,20 @@ $project_details_description = get_field( 'project_description', get_the_ID() ) 
                             </li>-->
                         </ul>
                     </div>
-
-                    <div class="open-project-holder mt-4">
-                        <a href="#" class="btn w-full">
-                            <span class="btn-text uppercase"><?php esc_html_e( 'Open Project', 'portfolio' ); ?></span>
-                            <span class="btn-icon"><i class="icon-arrow-right"></i></span>
-                        </a>
-                    </div>
+					<?php if ( ! empty( $project_url ) ): ?>
+                        <div class="open-project-holder mt-4">
+                            <a href="<?php echo esc_url( $project_url ) ?>"
+                               target="_blank"
+                               role="button"
+                               rel="nofollow"
+                               aria-label="<?php esc_attr_e( 'View Project', 'portfolio' ); ?>"
+                               class="btn w-full"
+                            >
+                                <span class="btn-text uppercase"><?php esc_html_e( 'View Project', 'portfolio' ); ?></span>
+                                <span class="btn-icon"><i class="icon-arrow-right"></i></span>
+                            </a>
+                        </div>
+					<?php endif; ?>
 
                 </div>
             </div>
