@@ -10,8 +10,8 @@ if ( ! function_exists( 'portfolio_the_post_navigation' ) ) {
 			array(
 				'mid_size'  => 1,
 				// 'prev_text' => __( '&larr; Older posts', 'portfolio' ),
-				'prev_text' => '<i class="icon-arrow-left"></i>',
 				// 'next_text' => __( 'Newer posts &rarr;', 'portfolio' ),
+				'prev_text' => '<i class="icon-arrow-left"></i>',
 				'next_text' => '<i class="icon-arrow-right"></i>',
 			)
 		);
