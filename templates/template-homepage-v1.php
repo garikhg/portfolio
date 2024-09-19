@@ -9,7 +9,7 @@ get_header();
 <div class="container">
 
     <div class="hero-slider-wrapper h-[480px] bg-frost-gray rounded-2xl">
-        <div class="swiper hero-slider rounded-2xl overflow-hidden">
+        <div class="swiper hero-slider rounded-2xl">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/demo/projects/project-2.jpeg' ?>"
@@ -25,6 +25,7 @@ get_header();
                     />
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
 
     </div>
