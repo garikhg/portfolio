@@ -15,10 +15,25 @@ a.text-link {
       left: 0;
       transform: scaleY(0);
       transform-origin: left;
-      background-color: var(--ang--primary);
+      background-color: currentColor;
       transition: var(--ang--transition-base);
     }
   }
+
+  &:hover {
+    span.text:after {
+      width: 100%;
+      opacity: 0.8;
+      transform: scaleY(1);
+      transition: var(--ang--transition-base);
+    }
+  }
+}
+
+
+
+a.text-link-primary {
+  color: var(--ang--primary);
 
   &:hover {
     color: var(--ang--primary);

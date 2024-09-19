@@ -27,6 +27,17 @@
   }
 }
 
+.project-cover {
+  &__title,
+  &__description {
+    color: var(--text, #fff);
+  }
+
+  &__description {
+    @apply text-xl font-light;
+  }
+}
+
 .portfolio-item {
   .overlay-details.fade-down {
     transform: translateY(-6%);
@@ -50,6 +61,10 @@
     }
   }
 
+  .heading {
+    color: var(--text, #fff);
+  }
+
   .project-category {
     &__holder {
       transform: translateY(0);
@@ -64,7 +79,7 @@
         &:after {
           content: ',';
           display: inline-block;
-          color: var(--ang--white);
+          color: currentColor;
         }
 
         &:last-child:after {
@@ -91,7 +106,7 @@
         display: inline-block;
         width: 50px;
         height: 2px;
-        background: var(--ang--white);
+        background-color: currentColor;
       }
     }
   }
