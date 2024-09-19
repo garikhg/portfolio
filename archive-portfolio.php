@@ -11,6 +11,7 @@ get_header();
 
 <div class="container">
 	<?php get_template_part( 'template-parts/header/archive-header-portfolio' ); ?>
+
     <div class="archive-content portfolio-projects pt-20">
         <div class="portfolio-filter flex gap-2 pb-5" data-filter="portfolio" data-filter-paged="true">
             <p>Filter by:</p>
@@ -78,12 +79,12 @@ get_header();
         </div>
 
         <div class="portfolio-grid flex flex-wrap -mx-5">
-
 			<?php while ( have_posts() ): ?>
 				<?php the_post(); ?>
 				<?php get_template_part( 'template-parts/content/content-portfolio' ) ?>
 			<?php endwhile; ?>
         </div>
+		<?php portfolio_the_post_navigation(); ?>
 
     </div>
 </div>

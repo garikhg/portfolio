@@ -27,6 +27,17 @@
   }
 }
 
+.project-cover {
+  &__title,
+  &__description {
+    color: var(--text, #fff);
+  }
+
+  &__description {
+    @apply text-xl font-light;
+  }
+}
+
 .portfolio-item {
   .overlay-details.fade-down {
     transform: translateY(-6%);
