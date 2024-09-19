@@ -1,3 +1,27 @@
+div.wpforms-container-full input[type=email],
+div.wpforms-container-full input[type=text] {
+  --wpforms-field-background-color: var(--ang--base-100);
+  --wpforms-field-border-radius: 30px;
+  --wpforms-field-size-padding-h: 22px;
+
+  min-height: 56px;
+}
+
+.wpforms-container .wpforms-form textarea {
+  --wpforms-field-background-color: var(--ang--base-100);
+  --wpforms-field-border-radius: 20px;
+  --wpforms-field-size-padding-h: 22px;
+}
+
+.wpforms-container input.wpforms-field-medium,
+.wpforms-container select.wpforms-field-medium,
+.wpforms-container .wpforms-field-row.wpforms-field-medium,
+.wp-core-ui div.wpforms-container input.wpforms-field-medium,
+.wp-core-ui div.wpforms-container select.wpforms-field-medium,
+.wp-core-ui div.wpforms-container .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+}
+
 div.wpforms-container-full:not(:empty) {
   margin: 0;
 }
