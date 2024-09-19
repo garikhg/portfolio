@@ -7,8 +7,8 @@
 
 $wrapper_class = 'portfolio-item-wrap w-1/2 grid-item apps';
 
-$cover_text_color        = get_field( 'title_color', get_the_ID() );
-$project_heading_styles  = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
+$cover_text_color       = get_field( 'title_color', get_the_ID() );
+$project_heading_styles = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
