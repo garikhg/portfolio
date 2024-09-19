@@ -5,11 +5,14 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
-$wrapper_class = 'portfolio-item-wrap w-1/2 grid-item apps';
+$wrapper_class = 'portfolio-item-wrap w-1/2 grid-item';
 
 $cover_text_color       = get_field( 'title_color', get_the_ID() );
 $project_heading_styles = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
-
+$tool_terms             = get_the_terms( get_the_ID(), 'tool' ) ?? '';
+if ( $tool_terms ) {
+	$wrapper_class .= ' ' . implode( ' ', wp_list_pluck( $tool_terms, 'slug' ) );
+}
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
     <div class="portfolio-item card p-5">
