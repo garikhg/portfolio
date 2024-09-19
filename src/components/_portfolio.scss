@@ -50,6 +50,10 @@
     }
   }
 
+  .heading {
+    color: var(--text, #fff);
+  }
+
   .project-category {
     &__holder {
       transform: translateY(0);
