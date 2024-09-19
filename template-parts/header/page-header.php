@@ -18,7 +18,7 @@ $subtitle = carbon_get_post_meta( get_the_ID(), 'crb_banner_subtitle' ) ?? '';
 
 <header class="<?php echo esc_attr( $wrapper_classes ) ?>">
 	<?php if ( $hse_thumbnail ): ?>
-        <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
+        <span class="block absolute top-0 right-0 left-0 h-full bg-gradient-to-t from-gray-950/70 to-transparent"></span>
 		<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
 	<?php endif; ?>
 

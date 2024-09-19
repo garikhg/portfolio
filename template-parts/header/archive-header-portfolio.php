@@ -16,7 +16,7 @@ if ( $archive_thumbnail ) {
 <header class="<?php echo esc_attr( $header_classes ); ?>">
 	<?php if ( $archive_thumbnail ): ?>
         <div class="absolute z-0 w-full h-full">
-            <span class="block w-full h-full absolute bg-gradient-to-t from-black/20 to-transparent"></span>
+            <span class="block absolute top-0 right-0 left-0 h-full bg-gradient-to-t from-gray-950/70 to-transparent"></span>
 			<?php
 			$attachment_classes = 'attachment-full size-full w-full max-w-full h-full object-cover';
 			echo wp_get_attachment_image( $archive_thumbnail, 'full', false, array( 'class' => $attachment_classes ) )

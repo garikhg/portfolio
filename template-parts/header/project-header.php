@@ -11,7 +11,7 @@ $filters_name = wp_list_pluck( $filters, 'name' );
     <div class="container relative">
 		<?php if ( has_post_thumbnail() ): ?>
             <div class="relative rounded-2xl overflow-hidden">
-                <span class="block absolute top-0 right-0 left-0 h-full bg-gradient-to-t from-gray-950/90 to-transparent"></span>
+                <span class="block absolute top-0 right-0 left-0 h-full bg-gradient-to-t from-gray-950/70 to-transparent"></span>
 				<?php
 				$thumbnail_classes = 'attachment-full size-full wp-post-image block w-full max-w-full h-[480px] object-cover';
 				the_post_thumbnail( 'full', array( 'class' => $thumbnail_classes ) );
