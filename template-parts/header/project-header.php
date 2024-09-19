@@ -3,7 +3,9 @@
  * Display project header.
  */
 
-$description = get_field( 'page_description', get_the_ID() ) ?? '';
+$description  = get_field( 'page_description', get_the_ID() ) ?? '';
+$filters      = get_the_terms( get_the_ID(), 'tool' ) ?? '';
+$filters_name = wp_list_pluck( $filters, 'name' );
 ?>
 <header class="project-cover">
     <div class="container relative">
@@ -25,6 +27,11 @@ $description = get_field( 'page_description', get_the_ID() ) ?? '';
 				<?php if ( ! empty( $description ) ): ?>
                     <div class="project-cover__description pt-2">
 						<?php echo wp_kses_post( $description ); ?>
+                    </div>
+				<?php endif; ?>
+				<?php if ( ! empty( $filters_name ) && ! $description ): ?>
+                    <div class="project-cover__description pt-2">
+						<?php echo implode( ', ', $filters_name ) ?>
                     </div>
 				<?php endif; ?>
             </div>

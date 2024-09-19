@@ -56,12 +56,6 @@ $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
                                     </div>
                                 </li>
 							<?php endif; ?>
-                            <!--<li>
-                                <div class="flex items-baseline gap-2">
-                                    <h6 class="font-semibold">Services:</h6>
-                                    <span>eLearning Design and Development</span>
-                                </div>
-                            </li>-->
                         </ul>
                     </div>
 					<?php if ( ! empty( $project_url ) ): ?>
