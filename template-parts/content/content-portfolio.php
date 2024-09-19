@@ -9,9 +9,9 @@ $wrapper_class = 'portfolio-item-wrap w-1/2 grid-item';
 
 $cover_text_color       = get_field( 'title_color', get_the_ID() );
 $project_heading_styles = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
-$tool_terms             = get_the_terms( get_the_ID(), 'tool' ) ?? '';
-if ( $tool_terms ) {
-	$wrapper_class .= ' ' . implode( ' ', wp_list_pluck( $tool_terms, 'slug' ) );
+$filters                = get_the_terms( get_the_ID(), 'tool' ) ?? '';
+if ( $filters ) {
+	$wrapper_class .= ' ' . implode( ' ', wp_list_pluck( $filters, 'slug' ) );
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
@@ -32,21 +32,17 @@ if ( $tool_terms ) {
                         <a href="<?php echo get_permalink() ?>"><?php the_title() ?></a>
                     </h4>
                     <div class="show-project mt-2">
-                        <div class="project-category__holder">
-                            <ul class="project-category__list flex gap-1.5">
-                                <li>
-                                    <a href="#" class="text-link text-sm project-category__link inline-block">
-                                        <span class="category-text">Identity</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="text-link text-sm project-category__link inline-block">
-                                        <span class="category-text">Mockup</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+						<?php if ( $filters ): ?>
+                            <div class="project-category__holder">
+                                <ul class="project-category__list flex gap-1.5">
+									<?php foreach ( $filters as $filter ): ?>
+                                        <li>
+                                            <span class="category-text text-sm inline-block"><?php echo esc_html( $filter->name ); ?></span>
+                                        </li>
+									<?php endforeach; ?>
+                                </ul>
+                            </div>
+						<?php endif; ?>
 
                         <div class="show-project__link font-semibold">
                             <a href="<?php echo get_permalink() ?>" class="text-link">
