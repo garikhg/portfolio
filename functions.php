@@ -1,1 +1,1 @@
-<?php/** * Functions and definitions * * @link https://developer.wordpress.org/themes/basics/theme-functions/ */require get_template_directory() . '/inc/template-setup.php';require get_template_directory() . '/inc/template-tags.php';
+<?php/** * Functions and definitions * * @link https://developer.wordpress.org/themes/basics/theme-functions/ */require get_template_directory() . '/inc/template-setup.php';require get_template_directory() . '/inc/template-blocks.php';require get_template_directory() . '/inc/template-tags.php';
