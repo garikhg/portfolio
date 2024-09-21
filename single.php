@@ -25,7 +25,7 @@ $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
 		get_template_part( 'template-parts/header/project-header' );
 	} ?>
 
-    <div class="project-content container py-20">
+    <div class="project-content container pt-6 md:pt-16">
         <div class="flex flex-wrap -mx-8">
 
             <div class="lg:w-1/4 px-8">
@@ -84,7 +84,7 @@ $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
         </div>
     </div>
 
-    <section class="bg-background py-[10vh]">
+    <section class="bg-background py-[10vh] mt-6 lg:mt-16">
 
         <div class="container">
             <div class="flex flex-wrap items-center">

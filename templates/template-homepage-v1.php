@@ -44,8 +44,7 @@ get_header();
                     <div class="section-description text-lg mt-3">
                         <p>
                             Select from any of our carefuly <strong>crafted website templates</strong> to best fit
-                            your
-                            personal style and professional needs.
+                            your personal style and professional needs.
                         </p>
                     </div>
                     <div class="mt-5">

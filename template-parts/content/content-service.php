@@ -13,8 +13,8 @@ $service_icon_id  = carbon_get_term_meta( $service->term_id, 'crb_service_icon' 
 $service_icon_url = $service_icon_id ? wp_get_attachment_image_url( $service_icon_id ) : '';
 ?>
 
-<article id="service-<?php echo esc_attr( $service->term_id ); ?>" class="service-table mb-8">
-    <div class="service-table__inside rounded-2xl transition-cubicBezier duration-150 hover:bg-background h-full p-4">
+<article id="service-<?php echo esc_attr( $service->term_id ); ?>" class="service-table">
+    <div class="service-table__inside rounded-2xl transition-cubicBezier duration-150 bg-background hover:bg-light-gray h-full p-4">
 		<?php if ( ! empty( $service_icon_url ) ): ?>
             <div class="mb-5">
                 <img src="<?php echo esc_url( $service_icon_url ) ?>"

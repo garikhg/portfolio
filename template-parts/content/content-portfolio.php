@@ -20,7 +20,7 @@ if ( $filters ) {
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
-    <div class="portfolio-item card p-4 sm:p-3 xl:p-5">
+    <div class="portfolio-item card p-4 sm:p-3">
         <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
             <div class="image-holder">
                 <a href="<?php echo get_permalink() ?>">
