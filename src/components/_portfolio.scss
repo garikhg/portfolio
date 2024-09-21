@@ -70,23 +70,6 @@
       transform: translateY(0);
       transition: var(--ang--transition-cubic-bezier);
     }
-
-    &__list {
-      li {
-        display: inline-table;
-        position: relative;
-
-        &:after {
-          content: ',';
-          display: inline-block;
-          color: currentColor;
-        }
-
-        &:last-child:after {
-          display: none;
-        }
-      }
-    }
   }
 
   .show-project {
