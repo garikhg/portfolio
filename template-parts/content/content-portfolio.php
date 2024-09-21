@@ -5,14 +5,18 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
-$wrapper_class = 'portfolio-item-wrap w-1/2 grid-item';
+$wrapper_class = 'portfolio-item-wrap w-full md:w-1/2 grid-item';
 
 $cover_text_color       = get_field( 'title_color', get_the_ID() );
 $project_heading_styles = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
 $filters                = get_the_terms( get_the_ID(), 'tool' ) ?? '';
+$project_categories     = '';
+
 if ( $filters ) {
-	$wrapper_class .= ' ' . implode( ' ', wp_list_pluck( $filters, 'slug' ) );
+	$wrapper_class      .= ' ' . implode( ' ', wp_list_pluck( $filters, 'slug' ) );
+	$project_categories = implode( ', ', wp_list_pluck( $filters, 'name' ) );
 }
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
     <div class="portfolio-item card p-5">
@@ -32,15 +36,9 @@ if ( $filters ) {
                         <a href="<?php echo get_permalink() ?>"><?php the_title() ?></a>
                     </h4>
                     <div class="show-project mt-2">
-						<?php if ( $filters ): ?>
+						<?php if ( $project_categories ): ?>
                             <div class="project-category__holder">
-                                <ul class="project-category__list flex gap-1.5">
-									<?php foreach ( $filters as $filter ): ?>
-                                        <li>
-                                            <span class="category-text text-sm inline-block"><?php echo esc_html( $filter->name ); ?></span>
-                                        </li>
-									<?php endforeach; ?>
-                                </ul>
+                                <span class="category-text text-sm inline-block"><?php echo $project_categories; ?></span>
                             </div>
 						<?php endif; ?>
 
