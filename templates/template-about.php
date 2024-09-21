@@ -74,38 +74,29 @@ $me_photo = get_template_directory_uri() . '/assets/images/demo/angeladiloyan-1x
                     <div class="w-4/6 text-lg font-light leading-loose space-y-8 px-4">
                         <p>
                             Based in Alexandria, Virginia, I bring a diverse background and global perspective to my
-                            work in
-                            eLearning, instructional design, and marketing. Originally from Queens, New York, my
-                            educational
-                            journey took me to the American University of Armenia, where I laid the foundation for a
-                            career
-                            in education. With experience across various disciplines, including social media and video
-                            editing, I now leverage these skills to create impactful eLearning solutions that blend
-                            instructional design principles with engaging, meaningful content.
+                            work in eLearning, instructional design, and marketing. Originally from Queens, New York, my
+                            educational journey took me to the American University of Armenia, where I laid the
+                            foundation for a career in education. With experience across various disciplines, including
+                            social media and video editing, I now leverage these skills to create impactful eLearning
+                            solutions that blend instructional design principles with engaging, meaningful content.
                         </p>
                         <p>
                             I hold a BA in Communications, which has equipped me with the ability to craft clear,
-                            compelling
-                            messages and engage diverse audiences. My MA in TEFL has further honed my expertise in
-                            language
-                            education, enabling me to create targeted and effective learning experiences. Together,
-                            these
-                            qualifications have shaped my approach to eLearning, where communication, education, and
-                            design
-                            intersect to create powerful instructional content.
+                            compelling messages and engage diverse audiences. My MA in TEFL has further honed my
+                            expertise in language education, enabling me to create targeted and effective learning
+                            experiences. Together, these qualifications have shaped my approach to eLearning, where
+                            communication, education, and design intersect to create powerful instructional content.
                         </p>
                         <p>
                             Instructional design, to me, is the art of creating learning experiences that truly resonate
                             with learners. My approach is grounded in the belief that learning should be intuitive,
                             engaging, and visually captivating. By combining instructional design principles with a keen
-                            eye
-                            for visual design, marketing strategies, and video editing techniques, I develop courses
+                            eye for visual design, marketing strategies, and video editing techniques, I develop courses
+                            that are not only educational but also enjoyable. My goal is to create learning experiences
                             that
-                            are not only educational but also enjoyable. My goal is to create learning experiences that
-                            are
-                            memorable, impactful, and aligned with the goals of both the learners and the organizations
-                            I
-                            work with. Whether it's interactive simulations, scenario-based learning, or visually rich
+                            are memorable, impactful, and aligned with the goals of both the learners and the
+                            organizations
+                            I work with. Whether it's interactive simulations, scenario-based learning, or visually rich
                             content, I focus on designing experiences that make a lasting impression.
                         </p>
 
