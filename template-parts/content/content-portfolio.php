@@ -5,7 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
-$wrapper_class = 'portfolio-item-wrap w-full md:w-1/2 grid-item';
+// $wrapper_class = 'portfolio-item-wrap w-full md:w-1/2 grid-item';
+$wrapper_class = 'portfolio-item-wrap grid-item';
 
 $cover_text_color       = get_field( 'title_color', get_the_ID() );
 $project_heading_styles = $cover_text_color ? ' style="--text: ' . $cover_text_color . ';"' : '';
@@ -19,7 +20,7 @@ if ( $filters ) {
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $wrapper_class ); ?> data-tilt-perspective="60000">
-    <div class="portfolio-item card p-5">
+    <div class="portfolio-item card p-4 sm:p-3 xl:p-5">
         <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
             <div class="image-holder">
                 <a href="<?php echo get_permalink() ?>">
@@ -32,7 +33,7 @@ if ( $filters ) {
 
             <div class="overlay-details w-full absolute bottom-0 p-[3vh]">
                 <div class="heading relative z-10"<?php echo $project_heading_styles; ?>>
-                    <h4 class="text-2xl font-semibold">
+                    <h4 class="text-xl md:text-2xl font-semibold">
                         <a href="<?php echo get_permalink() ?>"><?php the_title() ?></a>
                     </h4>
                     <div class="show-project mt-2">

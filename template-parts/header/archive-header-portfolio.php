@@ -24,10 +24,10 @@ if ( $archive_thumbnail ) {
         </div>
 	<?php endif; ?>
 
-    <div class="archive-header-inside relative z-10 py-8">
+    <div class="archive-header-inside relative z-10 py-8 px-6">
 		<?php if ( ! empty( $archive_title ) ): ?>
             <div class="archive-title__wrapper">
-                <h1 class="page-title text-5xl font-semibold text-center">
+                <h1 class="page-title text-4xl md:text-5xl lg:text-6xl font-semibold text-center">
 					<?php echo $archive_title ?>
                 </h1>
             </div>
