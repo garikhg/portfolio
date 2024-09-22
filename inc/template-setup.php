@@ -90,7 +90,11 @@ function portfolio_setup() {
 
 add_action( 'after_setup_theme', 'portfolio_setup' );
 
-function portfolio_scripts() {
+function portfolio_scripts(): void {
+	// Swiper
+	wp_enqueue_script( 'swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11', [ 'in_footer' => true ] );
+	wp_enqueue_style( 'swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11' );
+
 	// Font and Icons
 	wp_enqueue_script( 'lucide-icons', '//cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js', array(), null, [ 'in_footer' => true ] );
 	wp_enqueue_script( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js', array(), '6.6.0', [ 'in_footer' => true ] );
@@ -110,7 +114,7 @@ function portfolio_block_editor_assets() {
 	wp_enqueue_style( 'acf-editor-styles', get_template_directory_uri() . '/assets/css/style-editor-block.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
-add_action( 'enqueue_block_editor_assets', 'portfolio_block_editor_assets' );
+// add_action( 'enqueue_block_editor_assets', 'portfolio_block_editor_assets' );
 
 function portfolio_svg_support( $mimes ): array {
 	$mimes['svg'] = 'image/svg+xml';
