@@ -23,9 +23,11 @@ if ( ! $nav_menu ) {
     <div class="drawer-side">
         <label for="menu-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <div class="bg-base-200 w-80 min-h-full">
-            <h5 class="text-lg font-semibold text-gray-700 font-heading border-b border-base-300 p-4 px-8">
+            <h5 class="text-lg font-semibold text-primary font-heading border-b border-base-300 p-4 px-8">
 				<?php if ( is_front_page() ): ?>
 					<?php echo esc_html__( 'Menu', 'portfolio' ) ?>
+				<?php elseif ( is_singular( 'portfolio' ) ): ?>
+					<?php echo esc_html__( 'Portfolio', 'portfolio' ) ?>
 				<?php else: ?>
 					<?php the_title() ?>
 				<?php endif; ?>
