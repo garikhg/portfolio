@@ -13,7 +13,7 @@ $project_details_description = get_field( 'project_description', get_the_ID() ) 
 $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
 ?>
 <?php if ( have_posts() ): ?>
-    <div class="w-auto fixed left-0">
+    <div class="hidden w-auto xl:block fixed left-0">
         <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>"
            class="btn btn-back btn-link relative group h-14 px-2.5 inline-flex items-center no-underline hover:no-underline">
             <span class="btn-icon w-14 h-14 flex items-center justify-center rounded-full transition-all duration-200 group-hover:bg-background"><i class="icon-arrow-left text-2xl"></i></span>
@@ -26,9 +26,9 @@ $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
 	} ?>
 
     <div class="project-content container pt-6 md:pt-16">
-        <div class="flex flex-wrap -mx-8">
+        <div class="flex flex-wrap -mx-4 lg:-mx-6 xl:-mx-8 space-y-8">
 
-            <div class="lg:w-1/4 px-8">
+            <div class="w-full sm:w-2/5 xl:w-1/4 px-4 lg:px-6 xl:px-8">
                 <div class="project-details sticky top-24">
                     <div class="project-details__holder bg-background rounded-2xl p-8">
 
@@ -76,7 +76,7 @@ $project_url                 = get_field( 'project_url', get_the_ID() ) ?? '';
                 </div>
             </div>
 
-            <div class="lg:w-3/4 px-8">
+            <div class="w-full sm:w-3/5 xl:w-3/4 px-4 lg:px-6 xl:px-8">
 				<?php while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content/content-single' );
 				endwhile; ?>
