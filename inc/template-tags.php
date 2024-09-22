@@ -5,7 +5,6 @@
 
 if ( ! function_exists( 'portfolio_the_post_navigation' ) ) {
 	function portfolio_the_post_navigation() {
-
 		the_posts_pagination(
 			array(
 				'mid_size'  => 1,

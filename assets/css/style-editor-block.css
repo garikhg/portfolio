@@ -1,0 +1,4 @@
+.wp-block-acf-theme-block-about-me .acf-image-uploader .image-wrap img[src$=".svg"] {
+   min-width: 30px;
+   min-height: 30px;
+}

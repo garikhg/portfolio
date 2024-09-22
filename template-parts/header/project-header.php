@@ -19,9 +19,9 @@ $filters_name = wp_list_pluck( $filters, 'name' );
             </div>
 		<?php endif; ?>
         <div class="flex items-center justify-center absolute top-0 left-0 w-full h-full px-8 py-20">
-            <div class="project-cover__inside text-center max-w-screen-md mx-auto">
+            <div class="project-cover__inside text-center max-w-screen-md mx-auto px-6">
 				<?php
-				$the_title = sprintf( '<h1 class="project-cover__title text-5xl font-semibold text-center">%s</h1>', get_the_title() );
+				$the_title = sprintf( '<h1 class="project-cover__title text-4xl lg:text-6xl font-semibold text-center">%s</h1>', get_the_title() );
 				echo $the_title;
 				?>
 				<?php if ( ! empty( $description ) ): ?>

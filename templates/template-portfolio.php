@@ -1,7 +1,5 @@
 <?php
 /**
- * Template Name: Page Portfolio
- *
  * Portfolio items perspective https://perspective.js.org/
  */
 

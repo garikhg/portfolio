@@ -22,12 +22,12 @@ $subtitle = carbon_get_post_meta( get_the_ID(), 'crb_banner_subtitle' ) ?? '';
 		<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
 	<?php endif; ?>
 
-    <div class="page-header-inside">
+    <div class="page-header-inside px-6">
         <div class="page-title__wrapper">
 			<?php if ( ! empty( $title ) ): ?>
-                <h1 class="page-title text-5xl font-semibold text-center"><?php echo $title; ?></h1>
+                <h1 class="page-title text-4xl lg:text-6xl font-semibold text-center"><?php echo $title; ?></h1>
 			<?php else: ?>
-				<?php the_title( '<h1 class="page-title text-5xl font-semibold text-center">', '</h1>' ) ?>
+				<?php the_title( '<h1 class="page-title text-4xl lg:text-6xl font-semibold text-center">', '</h1>' ) ?>
 			<?php endif; ?>
         </div>
 		<?php if ( ! empty( $subtitle ) ): ?>

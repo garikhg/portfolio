@@ -6,11 +6,20 @@
  */
 
 get_header();
+?>
+<?php if ( have_posts() ): ?>
 
-/* Start the Loop */
-while ( have_posts() ):
-	the_post();
-	the_content();
-endwhile; // End of the loop.
+    <div class="container">
+        <div class="page-content pt-6 md:pt-16">
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ): the_post();
+				the_content();
+			endwhile; // End of the loop.
+			?>
+        </div>
+    </div>
 
-get_footer();
+<?php endif; ?>
+
+<?php get_footer();
