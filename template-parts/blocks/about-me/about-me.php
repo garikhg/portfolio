@@ -12,6 +12,7 @@ $my_info       = get_field( 'details' ) ?? '';
 $my_name       = $my_info['name'] ?? '';
 $my_profession = $my_info['profession'] ?? '';
 $my_photo_url  = $my_info['image']['url'] ?? '';
+$social_links  = $my_info['social_links'] ?? '';
 $contact_title = $my_info['contacts_title'] ?? '';
 $contacts      = $my_info['contacts'] ?? '';
 $biography     = get_field( 'biography' ) ?? '';
@@ -71,32 +72,34 @@ $biography     = get_field( 'biography' ) ?? '';
 					<?php endif; ?>
                 </div>
 
-                <div class="block">
-                    <span class="block sm:hidden lg:block w-16 border-b border-gray-200 mx-auto my-6 lg:my-8"></span>
+				<?php if ( ! empty( $social_links ) ): ?>
+                    <div class="block">
+                        <span class="block sm:hidden lg:block w-16 border-b border-gray-200 mx-auto my-6 lg:my-8"></span>
 
-                    <ul class="list-none flex items-center justify-center sm:justify-start lg:justify-center gap-6 my-4">
-                        <li>
-                            <a href="#" class="items-center">
-                                <i class="fa-brands fa-facebook w-6 h-6"></i>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="items-center">
-                                <i class="fa-brands fa-instagram instagram-icon w-6 h-6"></i>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="items-center">
-                                <i class="fa-brands fa-linkedin w-6 h-6"></i>
-                                <span class="sr-only">Linkedin In</span>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class="list-none flex items-center justify-center sm:justify-start lg:justify-center gap-6 my-4">
+							<?php foreach ( $social_links as $link ): ?>
+                                <li>
+                                    <a href="<?php echo esc_url( $link['link'] ) ?>"
+                                       target="_blank"
+                                       rel="nofollow"
+                                       class="items-center"
+                                    >
+										<?php if ( ! empty( $link['icon']['url'] ) ): ?>
+                                            <img src="<?php echo esc_url( $link['icon']['url'] ) ?>"
+                                                 alt="<?php echo esc_attr( $link['name'] ); ?>"
+                                                 class="w-7 h-7"
+                                            >
+										<?php endif; ?>
+                                        <span class="sr-only"><?php echo esc_html( $link['name'] ) ?></span>
+                                    </a>
+                                </li>
 
-                    <span class="block sm:hidden lg:block w-10 border-b border-gray-200 mx-auto my-6 lg:my-8"></span>
-                </div>
+							<?php endforeach; ?>
+                        </ul>
+
+                        <span class="block sm:hidden lg:block w-10 border-b border-gray-200 mx-auto my-6 lg:my-8"></span>
+                    </div>
+				<?php endif; ?>
 
 				<?php if ( ! empty( $contacts ) ): ?>
                     <div class="sm:hidden lg:block text-center">
