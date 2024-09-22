@@ -83,6 +83,9 @@ function portfolio_setup() {
 
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
+
+	// Image sizes
+	add_image_size( 'icon', '20', '20' );
 }
 
 add_action( 'after_setup_theme', 'portfolio_setup' );
@@ -102,6 +105,12 @@ function portfolio_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
+
+function portfolio_block_editor_assets() {
+	wp_enqueue_style( 'acf-editor-styles', get_template_directory_uri() . '/assets/css/style-editor-block.css', array(), wp_get_theme()->get( 'Version' ) );
+}
+
+add_action( 'enqueue_block_editor_assets', 'portfolio_block_editor_assets' );
 
 function portfolio_svg_support( $mimes ): array {
 	$mimes['svg'] = 'image/svg+xml';
