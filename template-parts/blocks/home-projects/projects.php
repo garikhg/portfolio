@@ -76,7 +76,7 @@ $page_link = get_field( 'page_link' ) ?? '';
 									$filters = implode( ', ', wp_list_pluck( $filters, 'name' ) );
 								}
 								?>
-                                <div class="swiper-slide lg:max-w-[653px] mr-8">
+                                <div class="swiper-slide lg:max-w-[653px]">
                                     <div class="portfolio-item-wrap" data-tilt-perspective="60000">
                                         <div class="portfolio-item card">
                                             <div class="portfolio-item__inside relative overflow-hidden rounded-lg">
