@@ -301,6 +301,9 @@ fieldset {
 }
 
 // WCF7
+.wpcf7-form {
+  @apply lg:pl-12;
+}
 .wpcf7-submit {
   @apply btn btn-block min-h-[53px];
 }
