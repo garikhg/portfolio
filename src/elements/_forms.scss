@@ -351,3 +351,9 @@ fieldset {
 .wpcf7 form.payment-required .wpcf7-response-output {
   @apply alert alert-error text-primary-foreground rounded-full;
 }
+
+body:not(.page-template-template-contact) {
+  .grecaptcha-badge {
+    transform: translateX(100%);
+  }
+}
