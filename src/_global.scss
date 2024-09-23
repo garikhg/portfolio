@@ -4,6 +4,13 @@
 
 @layer base {
   :root {
+
+    // Font Size
+    --ang--global--font-size-sm: 0.875rem; /* 14/16 */
+    --ang--global--font-size-base: 1rem; /* 16/16 */
+    --ang--global--font-size-lg: 1.125rem; /* 18/16 */
+
+    // Colors
     --ang--primary: #253570;
     --ang--primary-foreground: #ffffff;
     --ang--secondary: #415a94;
@@ -11,6 +18,7 @@
     --ang--accent: #ff7f50;
     --ang--neutral: #111013;
     --ang--base-100: #F7F7F8;
+    --ang--base-200: #f3f3f3;
     --ang--info: #3b82f6;
     --ang--success: #4c6fb5;
     --ang--warning: #f59e0b;
@@ -22,8 +30,32 @@
     --ang--black: #000;
     --ang--white: #fff;
 
+    --ang--global--color-white: rgb(255, 255, 255);
+    --ang--global--color-white-90: rgba(255, 255, 255, 0.9);
+    --ang--global--color-background: var(--ang--frost-gray);
+
+    // Font Family
     --ang--font-family--dm-sans: "DM Sans";
     --ang--font-family--inter: "Inter";
+
+    // Spacing
+    --ang--global--spacing-unit: 20px;
+    --ang--global--spacing-horizontal: 24px;
+
+    // Line Height
+    --ang--global--line-height-body: 1.7;
+
+
+    // Forms
+    --ang--form--font-size: var(--ang--global--font-size-sm);
+    --ang--form--font-weight: 500;
+    --ang--form--border-color: rgba(0, 0, 0, 0.20);
+    --ang--form--border-radius: 1.875rem; /* 30/16 */
+    --ang--form--textarea-border-radius: 1.5625rem; /* 25/16 */
+    --ang--form--color-text: #28303d;
+    --ang--form--color-ranged: var(--ang--secondary);
+    --ang--form--spacing-unit: calc(1 * var(--ang--global--spacing-unit));
+    --ang--form--background: var(--ang--base-100);
 
     // Buttons
     --border-btn: 1px;
