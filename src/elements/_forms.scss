@@ -1,32 +1,350 @@
-div.wpforms-field-container {
-  margin-top: -15px;
-}
-
-div.wpforms-container-full input[type=email],
-div.wpforms-container-full input[type=text] {
-  --wpforms-field-background-color: var(--ang--base-100);
-  --wpforms-field-border-radius: 30px;
-  --wpforms-field-size-padding-h: 22px;
-
-  min-height: 56px;
-}
-
-.wpforms-container .wpforms-form textarea {
-  --wpforms-field-background-color: var(--ang--base-100);
-  --wpforms-field-border-radius: 20px;
-  --wpforms-field-size-padding-h: 22px;
-}
-
-.wpforms-container input.wpforms-field-medium,
-.wpforms-container select.wpforms-field-medium,
-.wpforms-container .wpforms-field-row.wpforms-field-medium,
-.wp-core-ui div.wpforms-container input.wpforms-field-medium,
-.wp-core-ui div.wpforms-container select.wpforms-field-medium,
-.wp-core-ui div.wpforms-container .wpforms-field-row.wpforms-field-medium {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+.site textarea {
+  height: 3.5rem; /* 56/16 */
+  border: 1px solid var(--ang--form--border-color);
+  border-radius: var(--ang--form--border-radius);
+  color: var(--ang--form--color-text);
+  line-height: var(--ang--global--line-height-body);
+  padding: var(--ang--form--spacing-unit);
+  background: var(--ang--form--background);
+  margin: 0 2px;
   max-width: 100%;
+
+  &:focus {
+    color: var(--ang--form--color-text);
+    outline-offset: 1px;
+    outline: 2px dotted var(--ang--form--border-color);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  .is-dark-theme & {
+    background: var(--ang--global--color-white-90);
+  }
 }
 
-div.wpforms-container-full:not(:empty) {
-  margin: 0;
+.site textarea {
+  height: initial;
+  border-radius: var(--ang--form--textarea-border-radius);
 }
 
+// Reset the negative offset from normalize to make the thicker "border" work on focus.
+
+input[type="search"] {
+  &:focus {
+    outline-offset: -7px;
+
+    .is-dark-theme & {
+      background: var(--ang--global--color-background);
+    }
+  }
+}
+
+input[type="color"] {
+  padding: calc(var(--ang--form--spacing-unit) / 2);
+  height: calc(4 * var(--ang--form--spacing-unit));
+}
+
+input[type="email"],
+input[type="url"] {
+
+  /* rtl:ignore */
+  direction: ltr;
+}
+
+select {
+  border: 1px solid var(--ang--form--border-color);
+  border-radius: var(--ang--form--border-radius);
+  color: var(--form--color-text);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: var(--ang--global--line-height-body);
+  padding: var(--ang--form--spacing-unit) calc(3 * var(--ang--form--spacing-unit)) var(--ang--form--spacing-unit) var(--ang--form--spacing-unit);
+  background: var(--ang--form--background) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+  background-position: right var(--ang--form--spacing-unit) top 60%;
+
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px dotted var(--ang--form--border-color);
+  }
+
+  .is-dark-theme & {
+    background: var(--ang--global--color-white-90) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+    background-position: right var(--ang--form--spacing-unit) top 60%;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: initial;
+}
+
+label {
+  font-size: var(--ang--form--font-size);
+  font-weight: var(--ang--form--font-weight);
+  margin-bottom: calc(var(--ang--form--spacing-unit) / 3);
+}
+
+/**
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+https://codepen.io/aaroniker/pen/ZEYoxEY by Aaron Iker.
+License: MIT.
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--ang--form--border-color));
+    background: var(--ang--form--background);
+    transition: background .3s, border-color .3s, box-shadow .2s;
+
+    &:disabled {
+      opacity: 0.7;
+    }
+
+    .is-dark-theme & {
+      background: var(--ang--global--color-white-90);
+    }
+  }
+
+  input[type='checkbox'] {
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px dotted var(--ang--form--border-color);
+    }
+
+    &:after {
+      content: '';
+      opacity: 0;
+      display: block;
+      left: 5px;
+      top: 2px;
+      position: absolute;
+      width: 7px;
+      height: 13px;
+      border: 3px solid var(--ang--form--color-text);
+      border-top: 0;
+      border-left: 0;
+      transform: rotate(30deg);
+    }
+  }
+
+  input[type='radio'] {
+    border-radius: 50%;
+
+    &:after {
+      content: '';
+      opacity: 0;
+      display: block;
+      left: 3px;
+      top: 3px;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--ang--form--color-text);
+    }
+
+    &:checked {
+      border: 4px solid var(--ang--form--border-color);
+
+      &:after {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline-offset: 4px;
+        outline: 2px dotted var(--ang--form--border-color);
+      }
+    }
+  }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: var(--ang--global--font-size-base);
+  vertical-align: top;
+}
+
+/**
+ * https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+ */
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="radio"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: var(--ang--form--color-ranged);
+    border-radius: 6px;
+    outline-offset: 10px;
+
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+
+  input[type="radio"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 3px solid var(--ang--form--color-ranged);
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background: var(--ang--global--color-background);
+    cursor: pointer;
+  }
+
+  input[type="radio"]::-moz-range-thumb {
+    border: 3px solid var(--ang--form--color-ranged);
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background: var(--ang--global--color-background);
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+}
+
+input[type="radio"]::-ms-fill-upper {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  border-width: 19px 0;
+  border-color: var(--ang--global--color-background);
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="radio"]::-ms-fill-upper {
+  background: var(--ang--form--color-ranged);
+  border-radius: 6px;
+}
+
+input[type="radio"]::-ms-fill-lower {
+  background: var(--ang--form--color-ranged);
+  border-radius: 6px;
+}
+
+input[type="radio"]::-ms-thumb {
+  border: 3px solid var(--ang--form--color-ranged);
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: var(--ang--global--color-background);
+  cursor: pointer;
+}
+
+fieldset {
+  display: grid;
+  border-color: var(--ang--secondary);
+  padding: var(--ang--global--spacing-horizontal);
+
+  legend {
+    font-size: var(--ang--global--font-size-lg);
+  }
+
+  input {
+    &[type="submit"] {
+      max-width: max-content;
+    }
+
+    &:not([type="submit"]) {
+      margin-bottom: var(--ang--form--spacing-unit);
+    }
+
+    &[type="radio"],
+    &[type="checkbox"] {
+      margin-bottom: 0;
+    }
+
+    &[type="radio"] + label,
+    &[type="checkbox"] + label {
+      font-size: var(--ang--form--font-size);
+      padding: 0;
+      margin-bottom: var(--ang--global--spacing-unit);
+    }
+  }
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+.post-password-message {
+  font-size: var(--ang--global--font-size-sm);
+}
+
+.post-password-form {
+}
+
+// WCF7
+.wpcf7-submit {
+  @apply btn btn-block min-h-[53px];
+}
+
+.wpcf7 {
+  .form-wrapper {
+    @apply flex flex-wrap -mx-3;
+  }
+
+  .submit-wrapper {
+    @apply flex flex-wrap justify-center items-center;
+  }
+
+  .half-width {
+    @apply w-full lg:w-1/2 px-3 mb-6;
+  }
+
+  .full-width {
+    @apply w-full px-3 mb-6;
+  }
+
+  .input-group {
+    .wpcf7-not-valid-tip {
+      @apply text-sm;
+    }
+  }
+
+  .submit-wrapper {
+    p {
+      @apply w-full flex items-center justify-center;
+    }
+
+    .wpcf7-spinner {
+      @apply absolute opacity-0;
+    }
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  @apply alert alert-info text-primary-foreground rounded-full;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  @apply alert alert-error text-primary-foreground rounded-full;
+}
