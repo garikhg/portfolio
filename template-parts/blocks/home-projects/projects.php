@@ -89,7 +89,7 @@ $page_link = get_field( 'page_link' ) ?? '';
                                                     <div class="heading">
                                                         <h4 class="text-2xl font-semibold text-white">
                                                             <a href="<?php echo esc_attr( get_permalink( $project->ID ) ); ?>">
-																<?php echo wp_kses_post( $project->post_name ); ?>
+																<?php echo wp_kses_post( $project->post_title ); ?>
                                                             </a>
                                                         </h4>
 
