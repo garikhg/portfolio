@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This repository contains the custom WordPress template built for the portfolio website of Angela Diloyan (https://angeladiloyan.com). It is designed to showcase personal projects, professional experience, and a portfolio gallery with a modern and minimalistic design.",
   "main": "functions.php",
   "scripts": {
