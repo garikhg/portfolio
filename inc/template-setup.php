@@ -92,16 +92,16 @@ add_action( 'after_setup_theme', 'portfolio_setup' );
 
 function portfolio_scripts(): void {
 	// Swiper
-	wp_enqueue_script( 'swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11', [ 'in_footer' => true ] );
-	wp_enqueue_style( 'swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11' );
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/libs/swiper/swiper-bundle.min.js', array(), '11.1.14', [ 'in_footer' => true ] );
+	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/libs/swiper/swiper-bundle.min.css', array(), '11.1.14' );
 
 	// Font and Icons
-	wp_enqueue_script( 'lucide-icons', '//cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js', array(), null, [ 'in_footer' => true ] );
-	wp_enqueue_script( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js', array(), '6.6.0', [ 'in_footer' => true ] );
-	wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', array(), '6.6.0' );
+	wp_enqueue_script( 'lucide-icons', get_template_directory_uri() . '/assets/libs/lucide/lucide.min.js', array(), '0.445.0', [ 'in_footer' => true ] );
+	wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/assets/libs/fontawesome/js/all.min.js', array(), '6.6.0', [ 'in_footer' => true ] );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/libs/fontawesome/css/all.min.css', array(), '6.6.0' );
 
 	// DaisyUI
-	wp_enqueue_style( 'daisy-ui', '//cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css', array(), '4.12.10' );
+	wp_enqueue_style( 'daisy-ui', get_template_directory_uri() . '/assets/libs/daisyui/full.min.css', array(), '4.12.10' );
 
 	// Theme
 	wp_enqueue_style( 'portfolio-theme-style', get_template_directory_uri() . '/dist/main.css', array(), wp_get_theme()->get( 'Version' ) );
