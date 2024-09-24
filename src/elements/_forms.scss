@@ -304,6 +304,7 @@ fieldset {
 .wpcf7-form {
   @apply lg:pl-12;
 }
+
 .wpcf7-submit {
   @apply btn btn-block min-h-[53px];
 }
@@ -343,13 +344,16 @@ fieldset {
 }
 
 .wpcf7 form.sent .wpcf7-response-output {
-  @apply alert alert-info text-primary-foreground rounded-full;
+  background: transparent;
+  @apply text-sm text-primary p-0 border-none;
 }
 
+.wpcf7 form .wpcf7-response-output,
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output,
 .wpcf7 form.payment-required .wpcf7-response-output {
-  @apply alert alert-error text-primary-foreground rounded-full;
+  background: transparent;
+  @apply text-sm text-rose-600 p-0 border-none;
 }
 
 body:not(.page-template-template-contact) {
