@@ -6,9 +6,11 @@
 <nav id="site-navigation" class="primary-navigation relative flex"
      aria-label="<?php esc_attr_e( 'Primary menu', 'portfolio' ) ?>">
     <div class="menu-button-container -mr-2 md:-mr-3">
-        <label for="menu-drawer" class="btn btn-circle swap swap-rotate drawer-button lg:hidden">
-            <!--<input type="checkbox"/>-->
-            <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
+
+        <label for="menu-drawer" class="btn btn-circle relative swap swap-rotate drawer-button lg:hidden mb-0">
+            <input id="menu-drawer" type="checkbox" class="drawer-toggle"/>
+            <span class="sr-only"><?php esc_html_e( 'Menu', 'portfolio' ) ?></span>
+
             <!-- hamburger icon -->
             <svg class="swap-off fill-current"
                  xmlns="http://www.w3.org/2000/svg"
